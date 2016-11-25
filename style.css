@@ -1,8 +1,11 @@
 /*
-Theme Name: Food Night
-Author: Moi
-Author URI: https://wordpress.org/
-Description: My description
+Theme Name: Mon Theme
+Author: MOI
+Author URI: www.google.com
+Description: Ceci est mon theme perso
 Version: 0.0.1
 */
 
+body {
+	color:red;
+}
