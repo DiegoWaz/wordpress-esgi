@@ -3,7 +3,7 @@
 get_header();
 
 if (have_posts()) : while (have_posts()) : the_post();?>
-	<div id="single-work" class="container">
+	<div id="single" class="container">
 		<h2><?php the_title();?></h2>
 		<div class="work_image">
 			<?php the_post_thumbnail('large'); ?>
