@@ -16,11 +16,46 @@ function my_menus(){
 
 add_action('init', 'my_menus');
 
+// function my_sidebars() {
+// 	register_sidebar(array(
+// 		'name' => 'Barre latérale',
+// 		'description' => 'Cette colonne s\'affiche sur toutes les pages, pour l\'instant...',
+// 		'id' => 'sidebar-1'		
+// 	));
+// }
+
 function my_sidebars() {
 	register_sidebar(array(
-		'name' => 'Barre latérale',
-		'description' => 'Cette colonne s\'affiche sur toutes les pages, pour l\'instant...',
-		'id' => 'sidebar-1'		
+		'name' => __('Main_Sidebar', 'montheme'),
+		'id' => 'sidebar-1',
+		'description' => __('Widgets in this area will be shown ')
+		));
+
+	register_sidebar(array( 
+		'name'=>'footer-ABOUT', 
+		'id' => 'sidebar-2',
+		'before_widget' => '<li>', 
+		'after_widget' => '</li>', 
+		'before_title' => '<h2>', 
+		'after_title' => '</h2>', 
+	)); 
+
+	register_sidebar(array( 
+		'name'=>'footer-NETWORKS', 
+		'id' => 'sidebar-3',
+		'before_widget' => '<li>', 
+		'after_widget' => '</li>', 
+		'before_title' => '<h2>', 
+		'after_title' => '</h2>', 
+	));
+
+	register_sidebar(array( 
+		'name'=>'footer-HELP', 
+		'id' => 'sidebar-4',
+		'before_widget' => '<li>', 
+		'after_widget' => '</li>', 
+		'before_title' => '<h2>', 
+		'after_title' => '</h2>', 
 	));
 }
 
