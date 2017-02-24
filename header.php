@@ -1,58 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title><?php wp_title(); echo " | ".bloginfo('name'); ?></title>
-        <?php wp_head(); ?>
-    </head>
-    <body>
-    	<!-- header -->
-		<header>
-            <a href="<?= site_url(); ?>">
-                <img src="<?php header_image(); ?>" class="logo">
-            </a>
-            <?php 
-                $menu_items = wp_get_nav_menu_items('main-nav');
-                if( $menu_items ) {
-                    echo "<ul id='nav-menu-PP'>";
-                    foreach ($menu_items as $menu_item ) {
-                        $title = $menu_item->title;
-                        $id = $menu_item->object_id;
-                        echo "
-                            <li class='menu-".$title."'>"
-                        ?>
-                        <?php 
-                            if(is_page('Home')) {
-                                echo "<a href='#".$title."'>".ucfirst($title)."</a>";
-                            } else {
-                                echo "<a href='".site_url()."/home/#".$title."'>".ucfirst($title)."</a>";
-                            }
-                        ?>
-                        <?= 
-                            "</li>
-                            ";
-                    }
-                    echo "</ul>";
-                }
-            ?>      		
-		</header>
-		<!-- /header --> 
-<body>
-	<?php
+<?php
+    wp_head();
+?>
+<html lang="fr">
 
-		$data = get_object_vars(get_theme_mod('header_image_data'));
+<head>
 
-		$attachment_id = is_array($data) && isset($data['attachment_id']) ? $data['attachment_id']: false;
-		$att = get_post_meta($attachment_id);
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="foodbynight">
+    <meta name="author" content="creemson">
 
-		wp_nav_menu(array(
-			'theme-location'=>'main_menu',
-			'container-class'=>'navbar nav-default'
-		));
+    <title> <?php wp_title(); 
+    echo" | "; 
+    bloginfo('name'); ?></title>
+    <link rel="icon" type="image/x-icon" href="<?= img_uri(); ?>favicon.ico" />
 
-		if (get_header_image()) {
-			echo "<img src='".get_header_image()."' alt='logo'/>";
-		}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-	?>
+</head>
+
+<body id="page-top" class="index">
+    
+    <!-- Navigation -->
+    <?php get_template_part( 'template-parts/navigation', 'top' ); ?>
+
+
+
 
 

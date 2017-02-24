@@ -1,0 +1,56 @@
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icones' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e901";
+  font-family: icones;
+}
+.icon-edit:before {
+  content: "\e902";
+  font-family: icones;
+}
+.icon-filters:before {
+  content: "\e903";
+  font-family: icones;
+}
+.icon-historique:before {
+  content: "\e904";
+  font-family: icones;
+}
+.icon-image:before {
+  content: "\e905";
+  font-family: icones;
+}
+.icon-menu:before {
+  content: "\e906";
+  font-family: icones;
+}
+.icon-Messenger:before {
+  content: "\e907";
+  font-family: icones;
+}
+.icon-profil:before {
+  content: "\e908";
+  font-family: icones;
+}
+.icon-search:before {
+  content: "\e909";
+  font-family: icones;
+}
+.icon-video:before {
+  content: "\e900";
+  font-family: icones;
+}
+
